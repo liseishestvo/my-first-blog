@@ -13,7 +13,7 @@ SECRET_KEY = '5cp+a7u69lflz+n6jy^gqj(6rs8n)k&739w9nxuo+m@tkd+uac'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'aliciacatmouse.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', '192.168.1.8', 'aliciacatmouse.pythonanywhere.com']
 
 
 # Application definition
