@@ -20,6 +20,9 @@
                     <h1><a href="">{{ post.title }}</a></h1>
                     <p>{{ post.text|linebreaksbr }}</p>
                 </div>
+                 <div class="image">
+                        <img src="{{ post.image.url }}">
+                    </div>
                  <div class="author">
                         <p>Автор: {{ post.author }}</p>
                     </div>
