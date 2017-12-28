@@ -24,19 +24,10 @@
 
                 <div class="post">
                     <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-                    <p>{{ post.text|linebreaksbr }}</p>
                 </div>
 
                  <div class="image">
                         <img src="{{ post.image.url }}">
-                    </div>
-
-                 <div class="author">
-                        <p>Автор: {{ post.author }}</p>
-                    </div>
-
-                <div class="date">
-                        <p>Опубликовано: {{ post.published_date }}</p>
                     </div>
 
             {% endfor %}
