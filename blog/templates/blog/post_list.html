@@ -30,6 +30,14 @@
                         <img src="{{ post.image.url }}">
                     </div>
 
+                 <div class="author">
+                        <p>Автор: {{ post.author }}</p>
+                    </div>
+
+                <div class="date">
+                        <p>Опубликовано: {{ post.published_date }}</p>
+                    </div>
+
             {% endfor %}
          {% endblock %}
         </div>
