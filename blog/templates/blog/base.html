@@ -1,28 +1,31 @@
 {% load staticfiles %}
 <html>
-    <head>
-        <title>Кошачьи записи</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">Мои блоги</a></h1>
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-        </div>
+<head>
+    <title>Кошачьи записи</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+<div class="page-header">
+    <h1><a href="/">Мои блоги</a></h1>
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    {% if user.is_authenticated %}
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    {% endif %}
+</div>
 
-        <div class="content container">
+<div class="content container">
     <div class="row">
         <div class="col-md-8">
-           {% block content %}
-           {% endblock %}
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
 </div>
-    </body>
+<div class="cats">
+    <img src="https://lh3.googleusercontent.com/-WwyT2JQ6xyw/WkaVnLJBHbI/AAAAAAAADNA/CkVp0e2ZWkwQYNPrPj2VjPxSZcomn3sHwCK8BGAs/s369/%25D0%25B0%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25B5_%25D0%25BA%25D0%25BE%25D1%2582_%25D0%25B3%25D0%25BE%25D0%25BB%25D0%25BE%25D0%25B2%25D0%25B0.png">
+</div>
+</body>
 </html>
